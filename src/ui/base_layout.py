@@ -172,14 +172,47 @@ def style_base_layout():
                 line-height: 1.5 !important;
             }
 
-            code {
+            /* Inline code */
+            :not(pre) > code {
                 font-family: 'JetBrains Mono', monospace !important;
                 background: rgba(225, 29, 72, 0.25) !important;
-                color: #fca5a5 !important;
+                color: #fda4af !important;
                 padding: 0.25em 0.5em !important;
                 border-radius: 6px !important;
                 font-size: 0.88em !important;
                 border: 1px solid rgba(244, 63, 94, 0.4) !important;
+            }
+
+            /* Streamlit Code Blocks (st.code) */
+            div[data-testid="stCode"],
+            div[data-testid="stCodeBlock"] {
+                background: rgba(22, 7, 14, 0.95) !important;
+                border: 1px solid rgba(244, 63, 94, 0.45) !important;
+                border-radius: 10px !important;
+                overflow: hidden !important;
+            }
+
+            div[data-testid="stCode"] pre,
+            div[data-testid="stCodeBlock"] pre {
+                background: transparent !important;
+                margin: 0 !important;
+                padding: 10px 14px !important;
+            }
+
+            div[data-testid="stCode"] code,
+            div[data-testid="stCodeBlock"] code {
+                background: transparent !important;
+                border: none !important;
+                color: #ffffff !important;
+                font-family: 'JetBrains Mono', monospace !important;
+                font-size: 0.92rem !important;
+                font-weight: 600 !important;
+                padding: 0 !important;
+            }
+
+            div[data-testid="stCode"] button,
+            div[data-testid="stCodeBlock"] button {
+                color: #fda4af !important;
             }
 
             /* Ensure Material Symbols icons render with their own font */

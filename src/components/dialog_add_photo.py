@@ -50,5 +50,5 @@ def add_photos_dialog():
             st.rerun()
 
     st.markdown("<div style='margin: 14px 0;'></div>", unsafe_allow_html=True)
-    if st.button("Done", type="primary", width="stretch", icon="✓"):
+    if st.button("Done", type="primary", width="stretch", icon=":material/check:"):
         st.rerun()
