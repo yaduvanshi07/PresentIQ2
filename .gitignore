@@ -1,0 +1,34 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# Streamlit Secrets & Config (DO NOT COMMIT CREDENTIALS)
+.streamlit/secrets.toml
+streamlit/secrets.toml
+.streamlit/config.toml
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
