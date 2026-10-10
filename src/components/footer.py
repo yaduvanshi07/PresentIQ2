@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def footer_home():
-    github_url = "https://github.com"
+    github_url = "https://github.com/yaduvanshi07/PresentIQ2"
     st.markdown(
         f'<div style="margin-top:3.5rem; padding-top:1.5rem; border-top: 1px solid rgba(255,255,255,0.15); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">'
         f'<div>'
@@ -22,7 +22,7 @@ def footer_home():
 
 
 def footer_dashboard():
-    github_url = "https://github.com"
+    github_url = "https://github.com/yaduvanshi07/PresentIQ2"
     st.markdown(
         f'<div style="margin-top:3.5rem; padding-top:1.5rem; border-top: 1px solid rgba(255,255,255,0.15); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">'
         f'<div>'
