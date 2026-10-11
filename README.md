@@ -3,15 +3,34 @@
   <img src="assets/logo.png" alt="PresentIQ Logo" width="380" style="border-radius: 12px;"/>
   <h1>PresentIQ — AI-Powered Attendance System</h1>
   <p><strong>Automate classroom attendance using Face Recognition & Voice Recognition, powered by dlib and Resemblyzer.</strong></p>
+
+  <p>
+    <a href="https://landing-present-iq.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Landing%20Page-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" alt="Landing Page on Vercel" />
+    </a>
+    &nbsp;
+    <a href="https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live App on Streamlit Cloud" />
+    </a>
+  </p>
 </div>
 
 PresentIQ is a full-stack AI attendance application built with **Streamlit**. Teachers can take attendance by uploading classroom photos (face recognition) or recording audio (voice recognition). Students self-register using a webcam and optionally enroll their voice — no passwords required.
 
 ---
 
-## ✨ Features
+> ### 🌐 Live Deployments
+>
+> | Component | Deployed On | URL | Status |
+> |---|---|---|---|
+> |  **Official Landing Page** | **Vercel** | [landing-present-iq.vercel.app](https://landing-present-iq.vercel.app/) | [![Vercel](https://img.shields.io/badge/Live-Vercel-black?style=flat-square&logo=vercel)](https://landing-present-iq.vercel.app/) |
+> | 🚀 **Live Web Application** | **Streamlit Community Cloud** | [presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app](https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/) | [![Streamlit](https://img.shields.io/badge/Live-Streamlit%20Cloud-FF4B4B?style=flat-square&logo=streamlit)](https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/) |
 
-### 👩‍🏫 Teacher Portal
+---
+
+##  Features
+
+###  Teacher Portal
 - **Secure Login / Registration** — bcrypt-hashed password authentication
 - **Subject Management** — Create subjects with code, name, and section
 - **QR Code Subject Sharing** — Share a join link/QR code with students
@@ -28,7 +47,7 @@ PresentIQ is a full-stack AI attendance application built with **Streamlit**. Te
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 app.py                          ← Streamlit entry point, session-state router
@@ -64,7 +83,7 @@ app.py                          ← Streamlit entry point, session-state router
 
 ---
 
-## 🤖 ML Pipelines
+##  ML Pipelines
 
 ### Face Recognition (`face_pipeline.py`)
 | Step | Tool |
@@ -89,7 +108,7 @@ app.py                          ← Streamlit entry point, session-state router
 
 ---
 
-## 🗃️ Database Schema (Supabase / PostgreSQL)
+## Database Schema (Supabase / PostgreSQL)
 
 | Table | Key Columns |
 |---|---|
@@ -101,7 +120,7 @@ app.py                          ← Streamlit entry point, session-state router
 
 ---
 
-## ⚙️ Local Setup
+## Local Setup
 
 ### Prerequisites
 - Python 3.10+
@@ -207,9 +226,18 @@ Home Screen
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
-### Streamlit Community Cloud
+The project is deployed and actively hosted across the following platforms:
+
+### 🔗 Production Links
+
+| Component | Deployed On | Live URL | Description |
+|---|---|---|---|
+| **Landing Page** | **Vercel** | [https://landing-present-iq.vercel.app/](https://landing-present-iq.vercel.app/) | Marketing, product overview, and showcase landing page |
+| **Core Web App** | **Streamlit Community Cloud** | [https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/](https://presentiq2-rxuozdens46mkrxuwtfpnb.streamlit.app/) | Full AI attendance web application (teacher & student portals) |
+
+### Streamlit Community Cloud Setup
 1. Push the project to a public GitHub repository.
 2. Go to [share.streamlit.io](https://share.streamlit.io) and connect the repo.
 3. In **App Settings → Secrets**, add your `SUPABASE_URL` and `SUPABASE_KEY`.
@@ -219,7 +247,7 @@ Home Screen
 
 ---
 
-## 🔑 Key Design Decisions
+##  Key Design Decisions
 
 - **No student passwords** — Authentication is purely biometric (face). This lowers the barrier to entry for students.
 - **Streamlit `@st.cache_resource`** — dlib models and the SVC classifier are cached globally to avoid reloading on every interaction.
@@ -229,7 +257,7 @@ Home Screen
 
 ---
 
-## ⚠️ Known Limitations
+##  Known Limitations
 
 - The face SVC degrades with very few students (< 2) — single-student mode falls back to that student automatically.
 - Voice segmentation relies on silence detection (`top_db=30`); noisy classrooms may affect accuracy.
